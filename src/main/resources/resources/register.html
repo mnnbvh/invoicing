@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>注册</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.i18n.properties-1.0.9.js" ></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/md5.js"></script>
+<script type="text/javascript" src="js/page_regist.js?lang=zh"></script>
+</head>
+<body class="loginbody">
+<div class="dataEye">
+	<div class="loginbox registbox">
+		<div class="logo-a">
+		
+				<img src="images/logo-a.png">
+		
+		</div>
+		<div class="login-content reg-content">
+			<div class="loginbox-title">
+				<h3>注册</h3>
+			</div>
+			<form id="signupForm" action="register">
+			<div class="login-error"></div>
+			<div class="row">
+				<label class="field" for="name">账号(必填)</label>
+				<input type="text"  value="" class="input-text-user noPic input-click" name="name" id="name">
+			</div>
+			<div class="row">
+				<label class="field" for="password">密码(必填)</label>
+				<input type="password" value="" class="input-text-password noPic input-click" name="password" id="password">
+			</div>
+			<div class="row">
+				<label class="field" for="passwordAgain">确认密码(必填)</label>
+				<input type="password" value="" class="input-text-password noPic input-click" name="passwordAgain" id="passwordAgain">
+			</div>
+			<div class="row">
+				<label class="field" for="gender">性别</label>
+				<input type="text" value="" class="input-text-user noPic input-click" name="gender" id="gender">
+			</div>
+			<div class="row">
+				<label class="field" for="age">年龄(必填)</label>
+				<input type="text" value="" class="input-text-user noPic input-click" name="age" id="age">
+			</div>
+			<div class="row">
+				<label class="field" for="phonenumber">电话</label>
+				<input type="text" value="" class="input-text-user noPic input-click" name="phonenumber" id="phonenumber">
+			</div>
+			<div class="row">
+				<input type="radio" value="employee"  name="user">employee
+
+				<input type="radio" value="manager"  name="user" >manager
+			</div>
+			<div class="row tips">
+				<input type="checkbox" id="checkBox" >
+				<label>
+				我已阅读并同意
+				<a href="#" target="_blank">隐私政策、服务条款</a>
+				</label>
+			</div>
+			<div class="row btnArea">
+				<a class="login-btn" id="submit">注册</a>
+				<!-- <input type="submit" id="submit" value="注册" class="login-btn"> -->
+			</div>
+			</form>
+		</div>
+		<div class="go-regist">
+			已有帐号,请<a href="#" class="link">登录</a>
+		</div>
+	</div>
+	
+<div id="footer">
+	<div class="dblock">
+		
+		<div class="inline-block copyright">
+			<p>Copyright &copy; <a target="_blank" href="https://shop114778678.taobao.com">梧桐学堂</a>  版权所有</p>
+		</div>
+	</div>
+</div>
+</div>
+<div class="loading">
+	<div class="mask">
+		<div class="loading-img">
+		
+		</div>
+	</div>
+</div>
+</body>
+</html>
+

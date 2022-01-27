@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <title>供应商添加</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
+        <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
+		<script type="text/javascript" src="js/login.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <!-- Codrops top bar -->
+            <div class="codrops-top">
+                <a href="">
+                    <strong>&laquo; Previous Demo: </strong>Responsive Content Navigator
+                </a>
+                <span class="right">
+                    <a href=" http://tympanus.net/codrops/2012/03/27/login-and-registration-form-with-html5-and-css3/">
+                        <strong>Back to the Codrops Article</strong>
+                    </a>
+                </span>
+                <div class="clr"></div>
+            </div><!--/ Codrops top bar -->
+            <header>
+               
+				</header>
+            <section>				
+                <div id="container_demo" >
+                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form  action="/sys/suppliersadd" method="post"> 
+                                <h1>suppliers add</h1> 
+                                <p> 
+                                    <label for="username" class="uname" data-icon="u" > 供应商名字 </label>
+                                    <input id="name" name="name" required="required" type="text" />
+                                </p>
+                                <p> 
+                                    <label for="phonenumber" class="field" data-icon="p"> 地址 </label>
+                                    <input id="address" name="address" required="required" type="text"  /> 
+                                </p>
+                                <p> 
+                                    <label for="phonenumber" class="field" data-icon="p"> 邮编 </label>
+                                    <input id="zip" name="zip" required="required" type="text"  /> 
+                                </p>
+                                <p> 
+                                    <label for="phonenumber" class="field" data-icon="p"> 电话 </label>
+                                    <input id="telPhone" name="telPhone" required="required" type="text"  /> 
+                                </p>
+                                <p> 
+                                    <label for="phonenumber" class="field" data-icon="p"> 联系人 </label>
+                                    <input id="linkMan" name="linkMan" required="required" type="text"  /> 
+                                </p>
+                                <p> 
+                                    <label for="phonenumber" class="field" data-icon="p"> 联系人电话 </label>
+                                    <input id="linkTel" name="linkTel" required="required" type="text"  /> 
+                                </p>
+                                <p> 
+                                    <label for="phonenumber" class="field" data-icon="p"> 开户银行 </label>
+                                    <input id="bank" name="bank" required="required" type="text"  /> 
+                                </p>
+                                <p> 
+                                    <label for="phonenumber" class="field" data-icon="p"> 银行账号 </label>
+                                    <input id="bankAccount" name="bankAccount" required="required" type="text"  /> 
+                                </p>
+                                <p> 
+                                    <label for="phonenumber" class="field" data-icon="p"> 邮箱 </label>
+                                    <input id="email" name="email" required="required" type="text"  /> 
+                                </p>
+                                
+                                <p class="login button" align="center"> 
+                                    <input  type="submit" value="提交" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input  type="reset" value="重置" /> 
+                                   <!-- 	<input type="button" class="login-btn" id="submit" value="Login"/> -->
+                                   <!-- 	<a class="login-btn" id="submit" style="text-decoration: none;">登录</a>  -->
+								</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>  
+            </section>
+        </div>
+        <div class="loading">
+	<div class="mask">
+		<div class="loading-img">
+		</div>
+	</div>
+</div>
+    </body>
+</html>

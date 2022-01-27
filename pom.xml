@@ -1,0 +1,114 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.xu</groupId>
+	<artifactId>Invoicing</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Invoicing Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+
+
+	<!-- spring boot parent节点，引入这个之后，在下面和spring boot相关的就不需要引入版本了; -->
+	<parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.7.RELEASE</version>
+        <relativePath/>
+    </parent>
+	 <!--配置编码和jdk版本  -->
+	    <properties>
+	        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	        <java.version>1.8</java.version>
+	    </properties>
+	<dependencies>
+		<!-- 配置jpa -->
+	    <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<!-- 配置mysql驱动 -->
+	    <dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<!--Json Support-->
+	    <dependency>
+	        <groupId>com.alibaba</groupId>
+	        <artifactId>fastjson</artifactId>
+	        <version>1.1.43</version>
+	    </dependency>
+		<!-- web支持: 1、web mvc; 2、restful; 3、jackjson支持; 4、aop ........ -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- servlet 依赖. -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!--
+			JSTL（JSP Standard Tag Library，JSP标准标签库)是一个不断完善的开放源代码的JSP标签库，是由apache的jakarta小组来维护的。JSTL只能运行在支持JSP1.2和Servlet2.3规范的容器上，如tomcat 4.x。在JSP 2.0中也是作为标准支持的。
+
+			不然报异常信息：
+			javax.servlet.ServletException: Circular view path [/helloJsp]: would dispatch back to the current handler URL [/helloJsp] again. Check your ViewResolver setup! (Hint: This may be the result of an unspecified view, due to default view name generation.)
+
+		 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+
+
+
+		<!-- tomcat 的支持.-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+<!--			<scope>provided</scope>-->
+		</dependency>
+		<!-- 内嵌tomcat的支持. -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+<!--			<scope>provided</scope>-->
+		</dependency>
+
+		<dependency>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scala-library</artifactId>
+			<version>2.11.0</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>Invoicing</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<!--配置远程仓库地址-->
+		<repositories>
+			<repository>
+			    <id>spring-milestone</id>
+			    <url>https://repo.spring.io/libs-release</url>
+			</repository>
+		</repositories>
+	        <!--配置远程仓库地址-->
+		<pluginRepositories>
+			<pluginRepository>
+			    <id>spring-milestone</id>
+			    <url>https://repo.spring.io/libs-release</url>
+			</pluginRepository>
+		</pluginRepositories>
+</project>
